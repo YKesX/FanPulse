@@ -1,0 +1,55 @@
+{
+  "name": "fanpulse-validation",
+  "version": "1.0.0",
+  "description": "Validation and testing scripts for FanPulse system integration",
+  "main": "integration-tests.js",
+  "scripts": {
+    "test": "node integration-tests.js",
+    "test:esp32": "node esp32-simulator.js",
+    "test:gateway": "node gateway-tests.js",
+    "test:media": "node media-service-tests.js",
+    "test:blockchain": "node blockchain-tests.js",
+    "test:load": "node load-tests.js",
+    "test:all": "npm run test && npm run test:load",
+    "validate": "node integration-tests.js",
+    "simulate": "node esp32-simulator.js",
+    "benchmark": "node benchmark.js",
+    "monitor": "node monitor.js",
+    "health": "node health-check.js"
+  },
+  "keywords": [
+    "fanpulse",
+    "validation",
+    "testing",
+    "integration",
+    "esp32",
+    "blockchain",
+    "chiliz"
+  ],
+  "author": "FanPulse Team",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.6.0",
+    "chalk": "^4.1.2",
+    "commander": "^11.1.0",
+    "ethers": "^6.8.1",
+    "ws": "^8.14.2",
+    "uuid": "^9.0.1",
+    "joi": "^17.11.0",
+    "dotenv": "^16.3.1",
+    "fs-extra": "^11.1.1",
+    "lodash": "^4.17.21",
+    "moment": "^2.29.4",
+    "ora": "^5.4.1",
+    "table": "^6.8.1",
+    "yargs": "^17.7.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.8.7",
+    "eslint": "^8.52.0",
+    "prettier": "^3.0.3"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+} 
